@@ -1,6 +1,8 @@
 import org.scalajs.linker.interface.ModuleSplitStyle
 
 
+val laminar = "16.0.0"
+
 lazy val frontend = project.in(file("."))
   .enablePlugins(ScalaJSPlugin) // Enable the Scala.js plugin in this project
   .settings(
@@ -26,5 +28,7 @@ lazy val frontend = project.in(file("."))
     /* Depend on the scalajs-dom library.
      * It provides static types for the browser DOM APIs.
      */
-    libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "2.4.0",
+    libraryDependencies ++= Seq("org.scala-js" %%% "scalajs-dom" % "2.4.0",
+      "com.raquo" %%% "laminar" % laminar,
+      "com.raquo" %%% "airstream" % laminar ),
   )
