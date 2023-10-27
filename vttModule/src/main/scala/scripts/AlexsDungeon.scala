@@ -1,21 +1,26 @@
 package scripts
 
-import uk.co.alexknight.foundryTypes.Hooks
+//import uk.co.alexknight.foundryTypes.Hooks
 
-import scala.scalajs.js.annotation.{JSGlobalScope, JSImport}
-import scalajs.*
+import scala.scalajs.js
+import scala.scalajs.js.annotation.*
 
 @js.native @JSImport("/module.json", JSImport.Default)
 val moduleJson: String = js.native
 
-object AlexsDungeon {
-  def main(args: Array[String]): Unit = {
-    println("Hello world!")
-    Hooks.on("init", () => {
-      println("Test")
-    })
-    Hooks.on("ready", () => {
-      println("Test")
-    })
-  }
-}
+@main
+def AlexsDungeon(): Unit =
+  println("Hello world!")
+//  Hooks.on(
+//    "init",
+//    () => {
+//      println("Test")
+//    }
+//  )
+//  Hooks.on(
+//    "ready",
+//    () => {
+//      println("Test")
+//    }
+//  )
+end AlexsDungeon
