@@ -8,9 +8,9 @@ name := "DungeonServer-API"
 scalaVersion := "3.3.1"
 
 libraryDependencies := scalaJSDeps.value
+enablePlugins(ScalaJSPlugin)
 scalaJSUseMainModuleInitializer := true
 
-enablePlugins(ScalaJSPlugin)
 
 /* Configure Scala.js to emit modules in the optimal way to
  * connect to Vite's incremental reload.
@@ -22,7 +22,7 @@ enablePlugins(ScalaJSPlugin)
 scalaJSLinkerConfig ~= {
   _.withModuleKind(ModuleKind.ESModule)
     .withModuleSplitStyle(
-      ModuleSplitStyle.SmallModulesFor(List("frontend"))
+      ModuleSplitStyle.SmallModulesFor(List("dungeonServerApi"))
     )
     .withSourceMap(false) // causes warnings in vite
 }

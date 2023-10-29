@@ -54,3 +54,5 @@ jitwatch.out
 project/**/metals.sbt
 
 .bsp
+
+**.sc

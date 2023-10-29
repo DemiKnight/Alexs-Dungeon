@@ -11,7 +11,7 @@ lazy val foundVttTypes = (project in file("foundryTypes"))
   .enablePlugins(ScalaJSPlugin)
   .settings(name := "Foundry Types")
 
-lazy val dungeonServerApi = (project in file("dungeonServer-Api"))
+lazy val dungeonServerApi = (project in file("dungeonServerApi"))
 
 lazy val dungeonServer = (project in file("dungeonServer"))
   .dependsOn(dungeonServerApi)
