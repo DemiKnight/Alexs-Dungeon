@@ -7,7 +7,7 @@ val scalaJSDom = "2.4.0"
 
 enablePlugins(ScalaJSPlugin) // Enable the Scala.js plugin in this project
 
-name := "frontend"
+name := "Frontend"
 
 scalaVersion := "3.3.1"
 

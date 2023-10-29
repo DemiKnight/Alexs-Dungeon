@@ -23,12 +23,15 @@ object Dependencies {
   )
 
   val zioVersion = "2.0.18"
+  val zioHttpVersion = "3.0.0-RC3"
   val zioQuillVersion = ""
   val zioConfigVersion = ""
 
   val backendDeps: Def.Initialize[Seq[ModuleID]] = Def.setting(
     Seq(
-      "dev.zio" %% "zio" % "2.0.18"
+      "dev.zio" %% "zio" % zioVersion,
+      "dev.zio" %% "zio-streams" % zioVersion,
+      "dev.zio" %% "zio-http" % zioHttpVersion
     )
   )
 }

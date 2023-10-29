@@ -4,7 +4,7 @@ import org.scalajs.linker.interface.ModuleSplitStyle
 libraryDependencies ++= scalaJSDeps.value
 enablePlugins(ScalaJSPlugin) // Enable the Scala.js plugin in this project
 
-name := "vttModule"
+name := "VTTModule"
 
 scalaVersion := "3.3.1"
 

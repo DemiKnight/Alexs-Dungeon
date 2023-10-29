@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  haProxy:
+    image: haproxy:2.3
+    ports:
+      - "8080:8080"
+    volumes:
+      - haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg

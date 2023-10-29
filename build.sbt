@@ -11,15 +11,16 @@ lazy val foundVttTypes = (project in file("foundryTypes"))
   .enablePlugins(ScalaJSPlugin)
   .settings(name := "Foundry Types")
 
-lazy val frontend = (project in file("frontend"))
+lazy val dungeonServer = (project in file("dungeonServer"))
 
+lazy val frontend = (project in file("frontend"))
 
 lazy val vttModule = (project in file("vttModule"))
   .dependsOn(foundVttTypes)
 
 
 lazy val root = (project in file("."))
-  .aggregate(vttModule, frontend, foundVttTypes)
+  .aggregate(vttModule, frontend, foundVttTypes, dungeonServer)
   .settings(
     name := "AlexsDungeon"
   )
