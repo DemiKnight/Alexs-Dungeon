@@ -19,12 +19,21 @@ lazy val dungeonServer = (project in file("dungeonServer"))
 lazy val frontend = (project in file("frontend"))
   .dependsOn(dungeonServerApi)
 
+lazy val obsidianPlugin = (project in file("obsidianPlugin"))
+  .dependsOn(dungeonServerApi)
+
 lazy val vttModule = (project in file("vttModule"))
   .dependsOn(foundVttTypes, dungeonServerApi)
 
-
 lazy val root = (project in file("."))
-  .aggregate(vttModule, frontend, foundVttTypes, dungeonServer, dungeonServerApi)
+  .aggregate(
+    vttModule,
+    frontend,
+    foundVttTypes,
+    dungeonServer,
+    dungeonServerApi,
+    obsidianPlugin
+  )
   .settings(
     name := "AlexsDungeon"
   )
