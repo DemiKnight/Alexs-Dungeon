@@ -8,12 +8,18 @@ object Dependencies {
   lazy val laminar = "16.0.0"
   lazy val scalaJSDom = "2.4.0"
 
-  lazy val frontendDeps: Def.Initialize[Seq[sbt.ModuleID]] = Def.setting(
+  val scalaJSDeps = Def.setting(
     Seq(
-      "org.scala-js" %%% "scalajs-dom" % scalaJSDom,
-      "com.raquo" %%% "laminar" % laminar,
-      "com.raquo" %%% "airstream" % laminar
+      "org.scala-js" %%% "scalajs-dom" % scalaJSDom
     )
+  )
+
+  val frontendDeps: Def.Initialize[Seq[sbt.ModuleID]] = Def.setting(
+    scalaJSDeps.value ++
+      Seq(
+        "com.raquo" %%% "laminar" % laminar,
+        "com.raquo" %%% "airstream" % laminar
+      )
   )
 
   val zioVersion = "2.0.18"
@@ -25,5 +31,4 @@ object Dependencies {
       "dev.zio" %% "zio" % "2.0.18"
     )
   )
-
 }
