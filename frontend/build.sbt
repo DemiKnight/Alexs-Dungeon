@@ -32,4 +32,4 @@ scalaJSLinkerConfig ~= {
 /* Depend on the scalajs-dom library.
  * It provides static types for the browser DOM APIs.
  */
-libraryDependencies ++= frontendDeps
+libraryDependencies ++= frontendDeps.value

@@ -27,7 +27,7 @@ object Settings {
         )
         .withSourceMap(false) // causes warnings in vite
     },
-    libraryDependencies ++= frontendDeps
+    libraryDependencies ++= frontendDeps.value
   )
 
 }
