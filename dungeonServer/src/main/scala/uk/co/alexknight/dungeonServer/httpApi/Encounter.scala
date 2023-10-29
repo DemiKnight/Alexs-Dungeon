@@ -1,4 +1,4 @@
-package uk.co.alexknight.dungeonServer.api
+package uk.co.alexknight.dungeonServer.httpApi
 
 import zio.http.*
 import zio.http.Scheme.HTTP

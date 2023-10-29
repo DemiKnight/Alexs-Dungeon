@@ -1,4 +1,4 @@
-package uk.co.alexknight.dungeonServer.integrations.foundry.api
+package uk.co.alexknight.dungeonServer.integrations.foundry.httpApi
 
 import zio.http.*
  
